@@ -12,8 +12,7 @@ Features
 
 By default cartridge ROM will be booted (see push button how to suppress).
 
-*VIC-20 in a FPGA* <br>
-<br> <br>
+![vic20_dvi](\.assets/vic20_dvi.png)<br> <br>
 
 ## Tang Push Button utilization
 * S1 push button Reset
