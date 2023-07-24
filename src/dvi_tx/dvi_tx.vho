@@ -1,7 +1,7 @@
 --
 --Written by GowinSynthesis
 --Product Version "V1.9.8.11 Education"
---Mon Jul 24 19:08:48 2023
+--Mon Jul 24 21:26:36 2023
 
 --Source file index table:
 --file0 "\C:/Gowin/Gowin_V1.9.8.11_Education/IDE/ipcore/DVI_TX/data/dvi_tx_top.v"

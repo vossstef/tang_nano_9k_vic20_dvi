@@ -2,7 +2,7 @@
 //All rights reserved.
 //File Title: Post-PnR Simulation Model file
 //GOWIN Version: V1.9.8.11 Education
-//Created Time: Mon Jul 24 19:08:49 2023
+//Created Time: Mon Jul 24 21:26:36 2023
 
 `timescale 100 ps/100 ps
 module DVI_TX_Top(
