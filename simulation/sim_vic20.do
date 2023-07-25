@@ -26,26 +26,15 @@ if ![file exists "./sim.mpf"] {
  project addfile "./../../tb/prim_sim.vhd"
  project addfile "./../../src/gowin_rpll/gowin_rpll.vhd"
  project addfile "./../../src/gowin_rpll/gowin_rpll_hdmi.vhd"
- project addfile "./../../src/dvi_tx/dvi_tx.vhd"
-# project addfile "./../../src/dvi_tx/dvi_tx.vho"
-# project addfile "./../../src/dvi_tx/dvi_tx.vo"
 
  if [file exists work] {
     vdel -lib work -all
-#    vdel -lib gw_std_cell_lib -all
    }
 vlib work
-#vlib gw_std_cell_lib
-
-# Compile the GOWIN Standard Cells to Library std_cell_lib
-#vlog -incr -work gw_std_cell_lib "./../../tb/prim_sim.vhd"
 
 vcom -work work -2008 -autoorder -explicit \
  "./../../tb/prim_sim.vhd" \
  "./../../tb/vic20_tb.vhd" \
- "./../../src/dvi_tx/dvi_tx.vhd" \
-# "./../../src/dvi_tx/dvi_tx.vho" \
-# "./../../src/dvi_tx/dvi_tx.vo" \
  "./../../src/gowin_rpll/gowin_rpll_hdmi.vhd" \
  "./../../src/gowin_rpll/gowin_rpll.vhd" \
  "./../../src/gowin_prom/gowin_prom_char.vhd" \
@@ -74,9 +63,7 @@ vcom -work work -2008 -autoorder -explicit \
  project compileoutofdate
 }
 
-#vsim -L gw_std_cell_lib -voptargs=+acc -gui  work.vic20_tb
 vsim -voptargs=+acc -gui  work.vic20_tb
-
 view wave
 
 add wave -divider "Input Signals"
