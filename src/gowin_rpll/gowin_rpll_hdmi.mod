@@ -7,7 +7,7 @@
 
 -mod_name Gowin_rPLL_hdmi
 -file_name gowin_rpll_hdmi
--path C:/Users/stefa/Documents/tang_nano_9k_vic20_hdmi/src/gowin_rpll/
+-path C:/Users/stefa/Documents/tang_nano_9k_vic20_dvi/src/gowin_rpll/
 -type PLL
 -rPll true
 -file_type vhdl
@@ -19,7 +19,7 @@
 -dyn_odiv_sel false
 -odiv_sel 4
 -dyn_da_en true
--rst_sig false
+-rst_sig true
 -rst_sig_p false
 -fclkin 27
 -clkfb_sel 0

@@ -4,7 +4,6 @@ cd ./sim
 if ![file exists "./sim.mpf"] {
  project new "." sim
  project addfile "./../../src/dac.vhd"
- project addfile "./../../src/gowin_rpll/gowin_rpll.vhd"
  project addfile "./../../src/gowin_prom/gowin_prom_basic.vhd"
  project addfile "./../../src/vic20_ps2_if.vhd"
  project addfile "./../../src/ps2kbd.vhd"
@@ -24,6 +23,7 @@ if ![file exists "./sim.mpf"] {
  project addfile "./../../src/T65.vhd"
  project addfile "./../../tb/vic20_tb.vhd"
  project addfile "./../../tb/prim_sim.vhd"
+ project addfile "./../../src/vga_to_dvi.vhd"
  project addfile "./../../src/gowin_rpll/gowin_rpll.vhd"
  project addfile "./../../src/gowin_rpll/gowin_rpll_hdmi.vhd"
 
@@ -32,16 +32,15 @@ if ![file exists "./sim.mpf"] {
    }
 vlib work
 
+
 vcom -work work -2008 -autoorder -explicit \
  "./../../tb/prim_sim.vhd" \
  "./../../tb/vic20_tb.vhd" \
- "./../../src/gowin_rpll/gowin_rpll_hdmi.vhd" \
  "./../../src/gowin_rpll/gowin_rpll.vhd" \
- "./../../src/gowin_prom/gowin_prom_char.vhd" \
- "./../../src/gowin_prom/gowin_prom_char.vhd" \
+ "./../../src/gowin_rpll/gowin_rpll_hdmi.vhd" \
+ "./../../src/vga_to_dvi.vhd" \
  "./../../src/gowin_prom/gowin_prom_char.vhd" \
  "./../../src/gowin_sp_1kb/gowin_sp_1kb.vhd" \
- "./../../src/gowin_rpll/gowin_rpll.vhd" \
  "./../../src/gowin_prom/gowin_prom_basic.vhd" \
  "./../../src/gowin_prom/gowin_prom_kernal.vhd" \
  "./../../src/gowin_prom/gowin_prom_pacman.vhd" \
