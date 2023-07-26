@@ -91,7 +91,7 @@ port map (
     CALIB  => '0',
     clkout => clk_pixel,
     hclkin => clk_5x_pixel,
-    resetn => I_RESET
+    resetn => pll_lock
     );
 
   process
@@ -112,7 +112,7 @@ dvi: DVI_TX_Top
       I_rgb_clk => clk_pixel,
       I_rgb_vs => VGA_VSYNC,
       I_rgb_hs => VGA_HSYNC,
-      I_rgb_de => de,
+      I_rgb_de => not de,
       I_rgb_r => I_VGA_R & "0000",
       I_rgb_g => I_VGA_G & "0000",
       I_rgb_b => I_VGA_B & "0000",
