@@ -36,6 +36,7 @@ component Gowin_rPLL_hdmi is
     port (
         clkout: out std_logic;
         lock: out std_logic;
+        reset: in std_logic;
         clkin: in std_logic
     );
 end component;
@@ -77,6 +78,7 @@ clock_generator2: Gowin_rPLL_hdmi
 port map (
       clkin  => I_CLK,
       clkout => clk_5x_pixel,
+      reset  => not I_RESET,
       lock   => pll_lock
     );
 
@@ -97,9 +99,9 @@ port map (
     wait until rising_edge(clk_pixel);
     hsync     <= I_HSYNC;
     vsync     <= I_VSYNC;
+    active_q  <= I_BLANK;
     VGA_HSYNC <= hsync;
     VGA_VSYNC <= vsync;
-    active_q  <= not I_BLANK;
     de        <= active_q;
   end process;
 
@@ -110,10 +112,10 @@ dvi: DVI_TX_Top
       I_rgb_clk => clk_pixel,
       I_rgb_vs => VGA_VSYNC,
       I_rgb_hs => VGA_HSYNC,
-      I_rgb_de => not I_BLANK,
-      I_rgb_r(7 downto 4) => I_VGA_R,
-      I_rgb_g(7 downto 4) => I_VGA_G,
-      I_rgb_b(7 downto 4) => I_VGA_B,
+      I_rgb_de => de,
+      I_rgb_r => I_VGA_R & "0000",
+      I_rgb_g => I_VGA_G & "0000",
+      I_rgb_b => I_VGA_B & "0000",
       O_tmds_clk_p => O_tmds_clk_p,
       O_tmds_clk_n => O_tmds_clk_n,
       O_tmds_data_p => o_tmds_d_p,

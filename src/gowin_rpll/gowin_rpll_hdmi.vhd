@@ -5,7 +5,7 @@
 --Part Number: GW1NR-LV9QN88PC6/I5
 --Device: GW1NR-9
 --Device Version: C
---Created Time: Sun Jul 23 17:29:43 2023
+--Created Time: Wed Jul 26 11:27:54 2023
 
 library IEEE;
 use IEEE.std_logic_1164.all;
@@ -14,6 +14,7 @@ entity Gowin_rPLL_hdmi is
     port (
         clkout: out std_logic;
         lock: out std_logic;
+        reset: in std_logic;
         clkin: in std_logic
     );
 end Gowin_rPLL_hdmi;
@@ -117,7 +118,7 @@ begin
             CLKOUTP => clkoutp_o,
             CLKOUTD => clkoutd_o,
             CLKOUTD3 => clkoutd3_o,
-            RESET => gw_gnd,
+            RESET => reset,
             RESET_P => gw_gnd,
             CLKIN => clkin,
             CLKFB => gw_gnd,

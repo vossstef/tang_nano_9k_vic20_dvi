@@ -11,7 +11,6 @@
         <File path="src/T65_Pack.vhd" type="file.vhdl" enable="1"/>
         <File path="src/dac.vhd" type="file.vhdl" enable="1"/>
         <File path="src/dvi_tx/dvi_tx.vhd" type="file.vhdl" enable="1"/>
-        <File path="src/dvi_tx/dvi_tx.vho" type="file.vhdl" enable="1"/>
         <File path="src/gowin_dpb/gowin_dpb.vhd" type="file.vhdl" enable="1"/>
         <File path="src/gowin_prom/gowin_prom_basic.vhd" type="file.vhdl" enable="1"/>
         <File path="src/gowin_prom/gowin_prom_char.vhd" type="file.vhdl" enable="1"/>
