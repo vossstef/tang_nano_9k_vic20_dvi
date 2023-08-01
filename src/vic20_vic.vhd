@@ -238,6 +238,8 @@ architecture RTL of VIC20_VIC is
 
 begin
 
+  O_COMP_SYNC_L <='0';
+  
   p_strobe_gen : process(hcnt)
   begin
 
