@@ -43,7 +43,6 @@ vcom -work work -2008 -autoorder -explicit \
  "./../../src/gowin_rpll/gowin_rpll.vhd" \
  "./../../src/gowin_rpll/gowin_rpll_hdmi.vhd" \
  "./../../src/vga_to_dvi.vhd" \
- "./../../src/vga_to_dvi.vhd" \
  "./../../src/gowin_prom/gowin_prom_char.vhd" \
  "./../../src/gowin_sp_1kb/gowin_sp_1kb.vhd" \
  "./../../src/gowin_prom/gowin_prom_basic.vhd" \
