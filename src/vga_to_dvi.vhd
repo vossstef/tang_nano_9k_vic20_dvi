@@ -107,7 +107,7 @@ port map (
 
 dvi: DVI_TX_Top
     port map (
-      I_rst_n => I_RESET,
+      I_rst_n => pll_lock,
       I_serial_clk => clk_5x_pixel,
       I_rgb_clk => clk_pixel,
       I_rgb_vs => VGA_VSYNC,
